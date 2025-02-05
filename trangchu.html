@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Món Ăn Đặc Sản Bến Tre</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #b2fab4, #006400);
+            color: #333;
+        }
+        .navbar {
+            background: rgba(0, 100, 0, 0.9);
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .header {
+            margin-top: 50px;
+            background-image: url('https://imgcdn.tapchicongthuong.vn/tcct-media/24/5/6/xu-dua_663884786e5fe.jpg');
+            background-size: cover;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: yellow;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .content {
+            max-width: 1000px;
+            margin: 60px auto 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .dish {
+            display: flex;
+            margin-bottom: 20px;
+            gap: 20px;
+            background-color: #f0f8ff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .dish img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .dish:hover img {
+            transform: scale(1.1);
+        }
+        .footer {
+            background: #006400;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #006400;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Trang Chủ</a>
+        <a href="#specialties">Món Ăn</a>
+        <a href="#contact">Liên Hệ</a>
+    </div>
+    <div class="header">
+        <h1>Món Ăn Đặc Sản Bến Tre</h1>
+    </div>
+    <div class="content" id="specialties">
+        <div class="dish">
+            <img src="https://cdn.tgdd.vn/Files/2021/07/21/1370025/cach-lam-banh-trang-my-long-banh-trang-cuon-thot-not-dac-san-ben-tre-202207111547561985.jpg" alt="Bánh tráng Mỹ Lồng">
+            <div class="dish-info">
+                <h3>Bánh Tráng Mỹ Lồng</h3>
+                <p>Loại bánh tráng nổi tiếng, có vị thơm ngon từ nước cốt dừa.</p>
+            </div>
+        </div>
+        <div class="dish">
+            <img src="https://cdn.tgdd.vn/Files/2021/07/21/1370025/cach-lam-dong-dua-ben-tre-202207111548401764.jpg" alt="Dừa Sáp">
+            <div class="dish-info">
+                <h3>Dừa Sáp</h3>
+                <p>Loại dừa đặc biệt chỉ có ở Bến Tre, cơm dày và dẻo.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer" id="contact">
+        <p>Liên hệ: monanbentre@example.com</p>
+    </div>
+    <button id="backToTop" onclick="scrollToTop()">▲</button>
+    <script>
+        window.onscroll = function() {
+            document.getElementById("backToTop").style.display = (window.scrollY > 200) ? "block" : "none";
+        };
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+    </script>
+</body>
+</html>
